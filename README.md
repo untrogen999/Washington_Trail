@@ -21,6 +21,8 @@ server to insert HTML code from other files) to break up pieces of web pages, su
 bar, across files and include them into other files as needed. Since we can't do that with Github
 Pages, the full HTML is included in the HTML instead.
 
+Other than SSI includes, HTML file names were changed to be in all lowercase, to be more consistent since the menu bar was referencing file names with the wrong case for the first letter in some pages. Lastly, there were two versions of the menu bar on "map.html", and the more extensive version is now used on all pages.
+
 The archiver could not find a license for the original project, but if there is one, this revival project attains the same license.
 
 The original project repo, if you're
