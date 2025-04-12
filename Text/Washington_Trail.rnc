@@ -1,0 +1,58 @@
+
+start = journal
+
+journal = element journal {section+}
+
+head = element head {intro, p+}
+
+intro = element intro {text+, person, date}
+
+section = element section {head*, title*, body*}
+
+title = element title {p+}
+
+body = element body {heading, entry+, closing*}
+
+heading = element heading {p+}
+
+p = element p {n, mixed{(date | people | person | place | speech | time)*}}
+
+n = attribute n {xsd:integer}
+
+entry =element entry {p+}
+
+closing = element closing {text, person, text}
+
+person = element person {rank?, last?, first?, text+}
+
+people = element people {peopleType?, text+}
+
+place = element place {placeType?, colony?, text+}
+
+date = element date {month?, day?, year?, text}
+
+day = attribute day {xsd:integer}
+
+time = element time {timeType?, text+}
+
+timeType = attribute timeType {'morning' | 'afternoon' | 'evening' | 'night'}
+
+speech = element speech {text+, mixed{(sp | person | place)*}}
+
+sp = attribute sp {'Tanacharison'|'Washington'}
+
+rank =attribute rank {'Major'|'Governor'|'chief'|'General'|'Captain'|'Commander'|'Commandant'}
+
+last = attribute last {'Washington'|'Dinwiddie'|'Gist'|'Van Braam'|'Jefferson'|'Hunter'|'Currin'|'MacQuire'|'Davidson'|'Shingiss'|'Frazier'|'toocha'|'Monacatoocha'|'Joncaire'|'Custaloga'|'Riparti'|'White-Thunder'|'Trotter'|'MacClocklan'|'Tanacharison'|'Steward'|'Jenkin'|'Brown'|'Davison'|'LaForce'|'Aliquippa'|'Campbell'}
+
+first = attribute first {'George' | 'Robert' |'Christopher' | 'Jacob' |'Thomas' |'William'|'Barnaby' | 'John' |'John'|'Monocas'|'Shingiss'|'Jeskake'|'James'|'Henry'|'Custaloga'|'Joseph'}
+
+peopleType = attribute peopleType {'Indians'|'soldiers'|'Natives'|'French'|'English'}
+
+month =attribute month {'October'|'January'|'February'|'November'|'December'}
+
+year = attribute year {'1753'|'1754'}
+
+placeType = attribute placeType {'colony'|'river'|'region'|'city'|'ocean'|'State'|'lake'|'creek'|'home'|'fort'|'province'|'islands'}
+
+colony = attribute colony {'Virginia' | 'Pennsylvania'|'Louisiana Territory'|'Massachusetts'|'Maryland'|'Ohio'|'Northwest Territory'}
