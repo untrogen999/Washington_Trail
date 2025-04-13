@@ -26,7 +26,7 @@ Other than SSI includes, HTML file names were changed to be in all lowercase, to
 The archiver could not find a license for the original project, but if there is one, this revival project attains the same license.
 
 The original project repo, if you're
-interested, is hosted also on Github, but it does not use Github Pages: [https://untrogen999.github.io/Washington_Trail](https://untrogen999.github.io/Washington_Trail).
+interested, is hosted also on Github, but it does not use Github Pages: [https://github.com/JakeCode121/Washington_Trail](https://github.com/JakeCode121/Washington_Trail).
 
 See below for the project's original README:
 
